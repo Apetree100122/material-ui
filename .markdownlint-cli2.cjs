@@ -1,28 +1,20 @@
-const straightQuotes = require('./packages/markdownlint-rule-mui/straight-quotes');
-const gitDiff = require('./packages/markdownlint-rule-mui/git-diff');
-const tableAlignment = require('./packages/markdownlint-rule-mui/table-alignment');
-const terminalLanguage = require('./packages/markdownlint-rule-mui/terminal-language');
+const straightQuotes = require('./packages/markdownlint-rule-mui/straight-quotes');const gitDiff = require('./packages/markdownlint-rule-mui/git-diff');const tableAlignment = require('./packages/markdownlint-rule-mui/table-alignment') const terminalLanguage = require('./packages/markdownlint-rule-mui/terminal-language');
 
-// https://github.com/DavidAnson/markdownlint#rules--aliases
-module.exports = {
-  config: {
-    default: true,
-    MD004: false, // MD004/ul-style. Buggy
-    MD009: {
-      // MD009/no-trailing-spaces
-      br_spaces: 0,
-      strict: true,
-      list_item_empty_lines: false,
-    },
-    MD013: false, // MD013/line-length. Already handled by Prettier.
+<https://github.com/DavidAnson/markdownlint#rules--aliases>
+module.exports = {config: { default: true,  MD004: false, // 
+													 MD004/ul-style. Buggy
+    MD009: {  MD009/no-trailing-spaces
+      br_spaces: 0, strict: true, list_item_empty_lines: false, },MD013: false, // MD013/line-length. Already handled by Prettier.
     MD014: false, // MD014/commands-show-output. It's OK.
     MD024: { siblings_only: true }, // MD024/no-duplicate-heading/no-duplicate-header
     MD025: {
-      // Heading level
+      Heading level
       level: 1,
-      // RegExp for matching title in front matter
-      front_matter_title: '',
-    },
+      RegExp for
+				matching title
+					in 
+					front matter
+      front_matter_title: '',},
     MD033: false, // MD033/no-inline-html. We use it from time to time, it's fine.
     MD034: false, // MD034/no-bare-urls. Not a concern for us, our Markdown interpreter supports it.
     MD028: false, // MD028/no-blanks-blockquote prevent double blockquote
@@ -34,8 +26,7 @@ module.exports = {
     straightQuotes: true,
     gitDiff: true,
     tableAlignment: true,
-    terminalLanguage: true,
-  },
+    terminalLanguage: true,},
   customRules: [straightQuotes, gitDiff, tableAlignment, terminalLanguage],
   ignores: [
     'CHANGELOG.old.md',
